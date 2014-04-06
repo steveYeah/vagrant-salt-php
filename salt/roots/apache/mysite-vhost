@@ -1,11 +1,11 @@
 <VirtualHost *:80>
-    ServerName   preownd-dev.com
+    ServerName   my-site.dev
     DocumentRoot /vagrant
 
     <Directory /vagrant/web>
         AllowOverride All
         Order allow,deny
         Allow from All
-    </Directory>1
+    </Directory>
 
 </VirtualHost>

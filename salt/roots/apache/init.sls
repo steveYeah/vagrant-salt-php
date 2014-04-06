@@ -12,13 +12,13 @@ a2enmod rewrite:
         - require:
             - pkg: apache
 
-/etc/apache2/sites-available/preownd:
+/etc/apache2/sites-available/mysite:
   file:
       - managed
       - user: www-data
       - group: www-data
-      - source: salt://apache/preownd-vhost
+      - source: salt://apache/mysite-vhost
       - symlink:
-          - target: /etc/apache2/sites-enabled/preownd
+          - target: /etc/apache2/sites-enabled/mysite
       - require:
           - pkg: apache

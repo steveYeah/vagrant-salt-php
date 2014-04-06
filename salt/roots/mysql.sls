@@ -20,7 +20,7 @@ mysql-server:
     # Make sure a user for the app is present
     # mysqlpassword
     mysql_user.present:
-        - name: preownd
+        - name: mysite
         - password_hash: "*5E34E8C9BEC59CA63C2B30F6D06BD36D338E0454"
         - require:
             - service: mysql-server
@@ -28,7 +28,7 @@ mysql-server:
 
     mysql_grants.present:
         - grant: all
-        - database: preownd.*
-        - user: preownd
+        - database: mysite.*
+        - user: mysite
         - require:
-            - mysql_user: preownd
+            - mysql_user: mysite
