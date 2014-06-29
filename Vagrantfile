@@ -1,6 +1,7 @@
 Vagrant.configure("2") do |config|
   config.vm.box = "chef/debian-7.4-i386"
   config.vm.network "public_network"
+  config.vm.synced_folder ".", "/vagrant", :owner => "www-data", :group => "www-data"
 
   config.vm.synced_folder ".", "/vagrant", :owner => "vagrant", :group => "www-data", :mount_options => ["dmode=775,fmode=775"]
 
